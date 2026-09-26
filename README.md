@@ -62,20 +62,20 @@ flowchart TD
 ```
 .
 ├── Kepler Pipeline (01_*)
-│   ├── 01_kepler_files_saver.ipynb     # Collects and stores target filenames
-│   ├── 01_check_kepler_files.ipynb     # Exploratory FITS parsing & detrending prototype
-│   ├── 01_dataset_1.ipynb              # Interactive transit labeling tool
-│   └── 01_dd_CNN_LSTM.ipynb            # 2D CNN training on pixel imagery
+│   ├── 1.1_kepler_files_saver.ipynb     # Collects and stores target filenames
+│   ├── 1.2_check_kepler_files.ipynb     # Exploratory FITS parsing & detrending prototype
+│   ├── 1.3_dataset_1.ipynb              # Interactive transit labeling tool
+│   └── 1.4_dd_CNN_LSTM.ipynb            # 2D CNN training on pixel imagery
 │
 ├── TESS Pipeline (02_*)
-│   ├── 02_id_up.ipynb                  # Collects and stores TIC IDs
-│   ├── 02_id_check.ipynb               # Validates IDs against available TESS data
-│   ├── 02_check_id.ipynb               # Exploratory light curve analysis prototype
-│   ├── 02_dataset_2.ipynb              # Interactive transit labeling tool (OOP)
-│   └── 02_d_CNN_LSTM.ipynb             # 1D CNN / CNN+LSTM training
+│   ├── 2.1_id_up.ipynb                  # Collects and stores TIC IDs
+│   ├── 2.2_id_check.ipynb               # Validates IDs against available TESS data
+│   ├── 2.3_check_id.ipynb               # Exploratory light curve analysis prototype
+│   ├── 2.4_dataset_2.ipynb              # Interactive transit labeling tool (OOP)
+│   └── 2.5_d_CNN_LSTM.ipynb             # 1D CNN / CNN+LSTM training
 │
 └── Final Ensemble
-    └── phase_3.ipynb                   # Multi-branch stacked ensemble pipeline
+    └── THE_GOD_FATHER.ipynb                   # Multi-branch stacked ensemble pipeline
 ```
 
 ---
