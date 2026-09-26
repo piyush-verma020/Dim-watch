@@ -86,20 +86,20 @@ flowchart TD
 
 | Notebook | Purpose |
 |---|---|
-| `01_kepler_files_saver.ipynb` | Interactive tool for building and maintaining a registry of Kepler target pixel file (`.fits.gz`) names to process |
-| `01_check_kepler_files.ipynb` | Exploratory notebook for parsing FITS files, applying aperture photometry, quality filtering, and prototyping the detrending approach used later at scale |
-| `01_dataset_1.ipynb` | Batch-processes all registered files and presents each one's light curve for manual classification (Positive / Negative / Uncertain / Skip), producing labeled training data |
-| `01_dd_CNN_LSTM.ipynb` | Converts labeled FITS files into fixed-size images and trains a deep 2D convolutional neural network with k-fold cross-validation and data augmentation |
+| `1.1_kepler_files_saver.ipynb` | Interactive tool for building and maintaining a registry of Kepler target pixel file (`.fits.gz`) names to process |
+| `1.2_check_kepler_files.ipynb` | Exploratory notebook for parsing FITS files, applying aperture photometry, quality filtering, and prototyping the detrending approach used later at scale |
+| `1.3_dataset_1.ipynb` | Batch-processes all registered files and presents each one's light curve for manual classification (Positive / Negative / Uncertain / Skip), producing labeled training data |
+| `1.4_dd_CNN_LSTM.ipynb` | Converts labeled FITS files into fixed-size images and trains a deep 2D convolutional neural network with k-fold cross-validation and data augmentation |
 
 ### TESS Pipeline
 
 | Notebook | Purpose |
 |---|---|
-| `02_id_up.ipynb` | Interactive tool for collecting and storing TESS Input Catalog (TIC) IDs |
-| `02_id_check.ipynb` | Validates each TIC ID by attempting a full download-and-preprocess cycle, sorting IDs into successful and failed lists with resumable batch processing |
-| `02_check_id.ipynb` | Exploratory single-target analysis prototyping detrending and zoomed-transit visualization using `lightkurve` |
-| `02_dataset_2.ipynb` | Object-oriented labeling pipeline with retry logic, automatic transit-centering, and rich multi-panel diagnostic plots |
-| `02_d_CNN_LSTM.ipynb` | Trains a 1D CNN or a genuine CNN+LSTM hybrid on resampled flux sequences, with synthetic data generation as a fallback for failed downloads |
+| `2.1_id_up.ipynb` | Interactive tool for collecting and storing TESS Input Catalog (TIC) IDs |
+| `2.2_id_check.ipynb` | Validates each TIC ID by attempting a full download-and-preprocess cycle, sorting IDs into successful and failed lists with resumable batch processing |
+| `2.3_check_id.ipynb` | Exploratory single-target analysis prototyping detrending and zoomed-transit visualization using `lightkurve` |
+| `2.4_dataset_2.ipynb` | Object-oriented labeling pipeline with retry logic, automatic transit-centering, and rich multi-panel diagnostic plots |
+| `2.5_d_CNN_LSTM.ipynb` | Trains a 1D CNN or a genuine CNN+LSTM hybrid on resampled flux sequences, with synthetic data generation as a fallback for failed downloads |
 
 ### Final Ensemble — `phase_3.ipynb`
 
@@ -138,12 +138,12 @@ Run the notebooks in sequence within each pipeline, then feed both pipelines' ou
 
 **1. Kepler track:**
 ```
-01_kepler_files_saver.ipynb → 01_check_kepler_files.ipynb → 01_dataset_1.ipynb → 01_dd_CNN_LSTM.ipynb
+1.1_kepler_files_saver.ipynb → 1.2_check_kepler_files.ipynb → 1.3_dataset_1.ipynb → 1.4_dd_CNN_LSTM.ipynb
 ```
 
 **2. TESS track:**
 ```
-02_id_up.ipynb → 02_id_check.ipynb → 02_check_id.ipynb → 02_dataset_2.ipynb → 02_d_CNN_LSTM.ipynb
+2.1_id_up.ipynb → 2.2_id_check.ipynb → 2.3_check_id.ipynb → 2.4_dataset_2.ipynb → 2.5_d_CNN_LSTM.ipynb
 ```
 
 **3. Final ensemble:**
