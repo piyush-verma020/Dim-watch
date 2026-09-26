@@ -189,12 +189,6 @@ This project processes publicly available data from:
 
 ---
 
-## 📄 License
-
-This project is provided for research and educational purposes. Please review and add an appropriate license (e.g. MIT, Apache 2.0) before public distribution.
-
----
-
 ## 🙏 Acknowledgments
 
 Built using data and tools provided by NASA's Kepler and TESS missions, the Mikulski Archive for Space Telescopes (MAST), and the open-source `astropy` and `lightkurve` communities.
