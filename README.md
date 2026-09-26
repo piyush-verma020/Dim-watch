@@ -101,7 +101,7 @@ flowchart TD
 | `2.4_dataset_2.ipynb` | Object-oriented labeling pipeline with retry logic, automatic transit-centering, and rich multi-panel diagnostic plots |
 | `2.5_d_CNN_LSTM.ipynb` | Trains a 1D CNN or a genuine CNN+LSTM hybrid on resampled flux sequences, with synthetic data generation as a fallback for failed downloads |
 
-### Final Ensemble — `phase_3.ipynb`
+### Final Ensemble — `THE_GOD_FATHER.ipynb`
 
 The capstone notebook that merges the outputs of both pipelines into a unified, three-branch stacked ensemble:
 
@@ -148,7 +148,7 @@ Run the notebooks in sequence within each pipeline, then feed both pipelines' ou
 
 **3. Final ensemble:**
 ```
-phase_3.ipynb
+THE_GOD_FATHER.ipynb
 ```
 
 Each stage saves its outputs (CSV registries, labeled datasets, `.npy` arrays, trained models) to disk, so the pipeline can be paused and resumed at any point.
